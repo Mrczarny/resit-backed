@@ -4,3 +4,5 @@ pytz
 requests
 flask_sqlalchemy
 gunicorn
+flask-socketio
+flask-cors

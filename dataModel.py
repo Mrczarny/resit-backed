@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase
 
@@ -8,7 +9,7 @@ db = SQLAlchemy(model_class=Base)
 
 class Data(db.Model):
     id: Mapped[int] = mapped_column(primary_key=True)
-    timestamp: Mapped[str] = mapped_column(nullable=False)
+    timestamp: Mapped[datetime] = mapped_column(nullable=False)
     temperature: Mapped[float] = mapped_column(nullable=False)
     humidity: Mapped[float] = mapped_column(nullable=False)
     
