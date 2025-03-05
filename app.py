@@ -6,11 +6,11 @@ from dataModel import db, Data
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:8100'])
+CORS(app, origins=['https://pppp-b33c1.web.app'])
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'secret!'
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="https://pppp-b33c1.web.app")
 
 db.init_app(app)
 
