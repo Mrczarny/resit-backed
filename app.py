@@ -53,7 +53,7 @@ def get_graph_data():
     resp_data.extend([data[i *(len(data)//(point_count - 1))] for i in range(1, point_count - 1)])
     resp_data.append(data[-1])
     data = [{'temperature': d.temperature, 'humidity': d.humidity, 'timestamp': d.timestamp} for d in resp_data]
-    return {'data': data}
+    return data
 
 @app.route('/data/graph/week', methods=['GET'])
 def get_average_week_data():
